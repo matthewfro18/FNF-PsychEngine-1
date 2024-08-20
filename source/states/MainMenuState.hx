@@ -131,8 +131,6 @@ class MainMenuState extends MusicBeatState
 			var menuItem = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + optionShit[i]));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
-			menuItem.x = 237;
-			menuItem.y = 199;
 			menuItem.ID = i;
 			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
