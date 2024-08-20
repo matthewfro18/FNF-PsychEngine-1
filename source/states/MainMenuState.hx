@@ -133,7 +133,6 @@ class MainMenuState extends MusicBeatState
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 			
 			var menuChar = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + optionShit[i]));
@@ -147,7 +146,6 @@ class MainMenuState extends MusicBeatState
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuChar.scrollFactor.set(0, scr);
-			menuChar.antialiasing = ClientPrefs.globalAntialiasing;
 			menuChar.updateHitbox();
 	}
 
