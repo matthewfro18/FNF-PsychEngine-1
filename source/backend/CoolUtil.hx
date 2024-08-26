@@ -19,8 +19,6 @@ class CoolUtil
 	{
 		var daList:String = null;
 		#if (sys && MODS_ALLOWED)
-		var formatted:Array<String> = path.split(':'); //prevent "shared:", "preload:" and other library names on file path
-		path = formatted[formatted.length-1];
 		if(FileSystem.exists(path)) daList = File.getContent(path);
 		#else
 		if(Assets.exists(path)) daList = Assets.getText(path);
@@ -97,6 +95,19 @@ class CoolUtil
 		for (i in min...max) dumbArray.push(i);
 
 		return dumbArray;
+	}
+
+	public static function getMinAndMax(value1:Float, value2:Float):Array<Float>
+	{
+		var minAndMaxs = new Array<Float>();
+
+		var min = Math.min(value1, value2);
+		var max = Math.max(value1, value2);
+
+		minAndMaxs.push(min);
+		minAndMaxs.push(max);
+
+		return minAndMaxs;
 	}
 
 	inline public static function browserLoad(site:String) {
