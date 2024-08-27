@@ -13,8 +13,8 @@
     {
       "name": "flixel",
       "type": "haxelib",
-      "version": null
-    },
+      "version": "4.11.0"
+    },y
     {
       "name": "flixel-addons",
       "type": "haxelib",
